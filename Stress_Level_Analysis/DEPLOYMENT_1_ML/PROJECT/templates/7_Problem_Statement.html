@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    font-family: 'Verdana';
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  body h1 {
+    margin: 6px;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  body p {
+    margin: 12px 12px;
+    line-height: 1.618;
+    font-size: 15px;
+  }
+  .posrel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  div.central {
+    width: 1100px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  section {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+  }
+  section .posrel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  section .posrel div {
+    position: absolute;
+  }
+  section .posrel div.margem {
+    width: 100%;
+    height: 100%;
+    background-color: #7b9983;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  section .posrel div.margem:hover {
+    opacity: 1;
+  }
+  section .posrel div.borda {
+    width: calc(100% - 150px);
+    height: calc(100% - 150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 25px solid black;
+    transition: border-color 0.1s linear;
+    background-color: white;
+  }
+  section .posrel div.borda h1 {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  section .posrel div.borda:hover {
+    border-color: #7b9983;
+  }
+  section .posrel div.borda:hover h1 {
+    opacity: 1;
+  }
+  section .posrel div.padding {
+    width: calc(100% - 150px);
+    height: calc(100% - 150px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+  }
+  section .posrel div.padding:hover {
+    opacity: 1;
+    background-color: #7b9983;
+  }
+  section .posrel div.conteudo {
+    width: calc(100% - 250px);
+    height: calc(100% - 250px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    transition: background-color 0.1s linear;
+  }
+  section .posrel div.conteudo:hover {
+    background-color: #7b9983;
+  }
+  a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+<body>
+  <a href="{% url 'Home_4' %}" target="_blank">Goto  Homepage</a>
+  <div class="central">
+    <div class="posrel">
+        <section>
+        <div class="posrel">
+        <div class="margem">
+          <h1>De-Merits</h1>
+        </div>
+  
+        <div class="borda">
+          <h1>De-Merits</h1>
+        </div>
+  
+        <div class="padding">
+          <h1>De-Merits</h1>
+        </div>
+  
+        <div class="conteudo">
+          <h1>BASE PAPERS DEMERITS:</h1>
+          <p>•	They did not implement the deployment process.</p>
+          <p>•	They focused on only workload stress.</p>
+          <p>•	They method was not efficient way of this problem.</p>
+          <p>•	Accuracy was low.</p>
+        </div>
+  
+  
+       
+        </div>
+        
+      </section>
+      <section>
+        <div class="posrel">
+        <div class="margem">
+          <h1>Merits</h1>
+        </div>
+  
+        <div class="borda">
+          <h1>PROPOSED SYSTEM MERITS:</h1>
+        </div>
+  
+        <div class="padding">
+          <h1>PROPOSED SYSTEM MERITS:</h1>
+        </div>
+  
+        <div class="conteudo">
+          <h1>PROPOSED SYSTEM MERITS:</h1>
+          <p>•	We build a user-friendly interface application for deployment purposes.</p>
+          <p>•	We classify more than five stress level.</p>
+          <p>•	Accuracy was improved.</p>
+          <p>•	We compared more than a two algorithms and getting comparative analysis improve performance metrics.</p>
+        </div>
+  
+  
+       
+        </div>
+        
+      </section>
+    </div>
+        
+    </div>
+    
+   
+</body>
+</html>
